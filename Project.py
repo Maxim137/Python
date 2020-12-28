@@ -52,12 +52,11 @@ while y_max<=y_min:
 	print('Enter y_max > y_min')
 	y_max = float(input())
 
-potential = np.zeros((N, N))
-k = np.linspace(0, N-1, N)
-
 x1 = np.linspace(x_min, x_max, N)
 x2 = np.linspace(y_min, y_max, N)
 x, y = np.meshgrid(x1, x2)
+
+potential = np.zeros((N, N))
 
 #print (x1)
 #print (x2)
