@@ -52,12 +52,16 @@ while y_max<=y_min:
 	print('Enter y_max > y_min')
 	y_max = float(input())
 
+
+x1 = np.zeros(N)
+x2 = np.zeros(N)
 potential = np.zeros((N, N))
 k = np.linspace(0, N-1, N)
 
-x1 = np.linspace(x_min, x_max, N)
-x2 = np.linspace(y_min, y_max, N)
-x, y = np.meshgrid(x1, x2)
+#print(k)
+
+x1 = x_min + (x_max - x_min) * k / (N-1)
+x2 = y_min + (y_max - y_min) * k / (N-1)
 
 #print (x1)
 #print (x2)
@@ -73,6 +77,11 @@ for i in range (N):
 		#print(integral)
 
 #print(potential)
+
+xval = np.linspace(x_min, x_max, N)
+yval = np.linspace(y_min, y_max, N)
+x, y = np.meshgrid(xval, yval)
+
 
 fig = plt.figure()
 graph = fig.add_subplot(xlabel='X', ylabel='Y',zlabel='Potential', projection='3d')
