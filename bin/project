@@ -1,0 +1,4 @@
+from potentialproject import main
+
+
+main()
