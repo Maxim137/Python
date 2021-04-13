@@ -23,7 +23,7 @@ class NumbersTestCase(unittest.TestCase):
         x_max = 10
         y_min = 4
         y_max = 9
-        expect = True
+        expect = False
         self.assertEqual(potentialproject.check(a1, a2, a3, x_min, x_max, y_min, y_max), expect, f'Combination: a1 = {a1}, a2 = {a2}, a3 = {a3}, x_mix = {x_min}, x_max = {x_max}, y_min = {y_min}, y_max = {y_max} will not work')
 
     def test_3(self):
@@ -34,7 +34,7 @@ class NumbersTestCase(unittest.TestCase):
         x_max = 10
         y_min = 4
         y_max = 9
-        expect = True
+        expect = False
         self.assertEqual(potentialproject.check(a1, a2, a3, x_min, x_max, y_min, y_max), expect, f'Combination: a1 = {a1}, a2 = {a2}, a3 = {a3}, x_mix = {x_min}, x_max = {x_max}, y_min = {y_min}, y_max = {y_max} will not work')
         
 if __name__ == '__main__':
